@@ -5,7 +5,7 @@ import NavOptions from '../components/NavOptions'
 
 export default function Home() {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={tw`bg-white h-full`}>
             <View style={tw`p-5`}>
                 <Image
                     source={{
