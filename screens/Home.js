@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Text, SafeAreaView, Image } from 'react-native'
-import tw from 'tailwind-react-native-classnames'
-import NavOptions from '../components/NavOptions'
+import React from 'react';
+import { View, Text, SafeAreaView, Image } from 'react-native';
+import tw from 'tailwind-react-native-classnames';
+import NavOptions from '../components/NavOptions';
 
 export default function Home() {
     return (
@@ -20,5 +20,5 @@ export default function Home() {
                 <NavOptions />
             </View>
         </SafeAreaView>
-    )
+    );
 }
