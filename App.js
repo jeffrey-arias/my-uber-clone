@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
-import Home from './screens/Home';
-import Map from './screens/Map';
+import HomeScreen from './screens/HomeScreen';
+import MapScreen from './screens/MapScreen';
 import { store } from './store';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
@@ -18,16 +18,15 @@ export default function App() {
                     <Stack.Navigator>
                         <Stack.Screen
                             name="HomeScreen"
-                            component={Home}
+                            component={HomeScreen}
                             options={{ headerShown: false }}
                         />
                         <Stack.Screen
                             name="MapScreen"
-                            component={Map}
+                            component={MapScreen}
                             options={{ headerShown: false }}
                         />
                     </Stack.Navigator>
-                    <Home />
                 </SafeAreaProvider>
                 <View style={styles.container}></View>
             </NavigationContainer>
