@@ -24,7 +24,7 @@ export default function App() {
                         <Stack.Screen
                             name="MapScreen"
                             component={Map}
-                            options={{ headerShown: true }}
+                            options={{ headerShown: false }}
                         />
                     </Stack.Navigator>
                     <Home />
