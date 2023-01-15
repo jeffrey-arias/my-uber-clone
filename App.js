@@ -8,6 +8,7 @@ import { store } from './store';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { GOOGLE_MAPS_API_KEY } from '@env';
 
 export default function App() {
     const Stack = createStackNavigator();
