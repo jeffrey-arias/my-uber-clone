@@ -29,7 +29,6 @@ export default function App() {
                         />
                     </Stack.Navigator>
                 </SafeAreaProvider>
-                <View style={styles.container}></View>
             </NavigationContainer>
         </Provider>
     );
