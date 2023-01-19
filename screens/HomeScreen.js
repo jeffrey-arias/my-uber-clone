@@ -4,8 +4,11 @@ import tw from 'tailwind-react-native-classnames';
 import NavOptions from '../components/NavOptions';
 import { GOOGLE_MAPS_API_KEY } from '@env';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { setOrigin, setDestination } from '../slices/navSlice';
+import { useDispatch } from 'react-redux';
 
 export default function HomeScreen() {
+    const dispatch = useDispatch();
     return (
         <SafeAreaView style={tw`bg-white h-full`}>
             <View style={tw`p-5`}>
@@ -19,18 +22,14 @@ export default function HomeScreen() {
                         resizeMode: 'contain',
                     }}
                 />
-                {/* <GooglePlacesAutocomplete
-                    placeholder="Where From?"
-                    nearbyPlacesAPI="GooglePlacesSearch"
-                    debounce={400}
-                /> */}
+
                 <GooglePlacesAutocomplete
                     placeholder="Where From?"
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
                     styles={{
                         container: {
-                            flex: 2,
+                            flex: 0,
                         },
                         textInput: {
                             fontSize: 18,
@@ -41,9 +40,15 @@ export default function HomeScreen() {
                         key: GOOGLE_MAPS_API_KEY,
                         language: 'en',
                     }}
-                    requestUrl={{
-                        useOnPlatform: 'web', // or "all"
-                        url: 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api', // or any proxy server that hits https://maps.googleapis.com/maps/api
+                    enablePoweredByContainer={false}
+                    fetchDetails={true}
+                    onPress={(data, details = null) => {
+                        dispatch(
+                            setOrigin({
+                                location: details.geometry.location,
+                                description: data.description,
+                            })
+                        );
                     }}
                 />
                 <NavOptions />

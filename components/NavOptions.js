@@ -51,7 +51,7 @@ export default function NavOptions() {
                         name="arrowright"
                         color="white"
                         type="antdesign"
-                    ></Icon>
+                    />
                 </TouchableOpacity>
             )}
         />
