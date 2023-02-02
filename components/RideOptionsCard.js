@@ -1,6 +1,9 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { SafeAreaView, Text } from 'react-native';
 
 export default function RideOptionsCard() {
-    return <Text>RideOptionsCard</Text>;
+    return;
+    <SafeAreaView>
+        <Text>RideOptionsCard</Text>
+    </SafeAreaView>;
 }
