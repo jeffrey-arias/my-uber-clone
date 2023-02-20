@@ -23,7 +23,7 @@ export default function HomeScreen() {
                             resizeMode: 'contain',
                         }}
                     />
-                    <Image
+                    {/* <Image
                         source={{
                             uri: 'https://cdn-icons-png.flaticon.com/512/5110/5110577.png',
                         }}
@@ -32,7 +32,7 @@ export default function HomeScreen() {
                             height: 100,
                             resizeMode: 'contain',
                         }}
-                    />
+                    /> */}
                 </View>
 
                 <GooglePlacesAutocomplete
