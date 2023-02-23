@@ -7,6 +7,7 @@ import { GOOGLE_MAPS_API_KEY } from '@env';
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
+import NavFavorites from './NavFavorites';
 
 export default function NavigateCard() {
     const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export default function NavigateCard() {
                     }}
                 />
             </View>
+            <NavFavorites />
         </SafeAreaView>
     );
 }

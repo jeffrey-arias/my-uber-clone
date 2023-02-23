@@ -6,6 +6,7 @@ import { GOOGLE_MAPS_API_KEY } from '@env';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { setDestination, setOrigin } from '../slices/navSlice';
 import { useDispatch } from 'react-redux';
+import NavFavorites from '../components/NavFavorites';
 
 export default function HomeScreen() {
     const dispatch = useDispatch();
@@ -23,7 +24,7 @@ export default function HomeScreen() {
                             resizeMode: 'contain',
                         }}
                     />
-                    {/* <Image
+                    <Image
                         source={{
                             uri: 'https://cdn-icons-png.flaticon.com/512/5110/5110577.png',
                         }}
@@ -32,7 +33,7 @@ export default function HomeScreen() {
                             height: 100,
                             resizeMode: 'contain',
                         }}
-                    /> */}
+                    />
                 </View>
 
                 <GooglePlacesAutocomplete
@@ -65,6 +66,7 @@ export default function HomeScreen() {
                     }}
                 />
                 <NavOptions />
+                <NavFavorites />
             </View>
         </SafeAreaView>
     );
