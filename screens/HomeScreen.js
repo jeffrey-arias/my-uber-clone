@@ -26,7 +26,7 @@ export default function HomeScreen() {
                     />
                     <Image
                         source={{
-                            uri: 'https://cdn-icons-png.flaticon.com/512/5110/5110577.png',
+                            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMI9s8IRwlD5M87oNcAWOzT5rMggbWRTgng&usqp=CAU',
                         }}
                         style={{
                             width: 50,
@@ -34,6 +34,11 @@ export default function HomeScreen() {
                             resizeMode: 'contain',
                         }}
                     />
+                    <Text
+                        style={tw`absolute bottom-0 pb-3 pl-10 text-gray-500 text-xs`}
+                    >
+                        By: Jeffrey Arias
+                    </Text>
                 </View>
 
                 <GooglePlacesAutocomplete
