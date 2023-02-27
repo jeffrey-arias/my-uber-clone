@@ -58,7 +58,10 @@ export default function NavigateCard() {
                     <Text style={tw`text-white text-center`}>Rides</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    style={tw`flex-row bg-white w-24 px-3 py-4 rounded-ful justify-between`}
+                    style={[
+                        tw`flex-row bg-white w-24 px-3 py-4 rounded-full justify-between border-solid border-black`,
+                        { borderWidth: 1 },
+                    ]}
                 >
                     <Icon
                         name="fast-food-outline"
