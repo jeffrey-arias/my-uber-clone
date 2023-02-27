@@ -42,18 +42,34 @@ export default function NavigateCard() {
                 />
             </View>
             <NavFavorites />
-            <View>
-                <TouchableOpacity style={tw`flex-row bg-black w-24 `}>
+            <View
+                style={tw`flex-row bg-white justify-evenly py-2 mt-2 border-t border-gray-100`}
+            >
+                <TouchableOpacity
+                    style={tw`flex-row bg-black w-24 px-3 py-4 rounded-full justify-between`}
+                    onPress={() => navigation.navigate('RideOptionsCard')}
+                >
                     <Icon
                         name="car"
                         type="font-awesome"
                         color="white"
                         size={16}
-                    >
-                        <Text style={tw`text-white text-center`}>Rides</Text>
-                    </Icon>
+                    ></Icon>
+                    <Text style={tw`text-white text-center`}>Rides</Text>
                 </TouchableOpacity>
-                <TouchableOpacity></TouchableOpacity>
+                <TouchableOpacity
+                    style={tw`flex-row bg-white w-24 px-3 py-4 rounded-ful justify-between`}
+                >
+                    <Icon
+                        name="fast-food-outline"
+                        type="ionicon"
+                        color="black"
+                        size={16}
+                    ></Icon>
+                    <Text style={tw`text-white text-center text-black`}>
+                        Eats
+                    </Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     );
