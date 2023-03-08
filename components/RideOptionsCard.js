@@ -9,7 +9,9 @@ import {
     View,
 } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { useSelector } from 'react-redux';
 import tw from 'tailwind-react-native-classnames';
+import { selectTravelTimeInformation } from '../slices/navSlice';
 
 const data = [
     {
@@ -31,9 +33,13 @@ const data = [
         image: 'https://links.papareact.com/7pf',
     },
 ];
+
+const SURGE_CHARGE_RATE = 2;
+
 export default function RideOptionsCard() {
     const navigation = useNavigation();
     const [selected, setSelected] = useState(null);
+    const travelTimeInformation = useSelector(selectTravelTimeInformation);
     return (
         <SafeAreaView style={tw`bg-white flex-grow`}>
             <View>
@@ -45,7 +51,9 @@ export default function RideOptionsCard() {
                 >
                     <Icon name="chevron-left" type="fontawesome" />
                 </TouchableOpacity>
-                <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
+                <Text style={tw`text-center py-5 text-xl`}>
+                    Select a Ride - {travelTimeInformation?.distance?.text}
+                </Text>
             </View>
             <FlatList
                 data={data}
@@ -65,6 +73,7 @@ export default function RideOptionsCard() {
                                 width: 100,
                                 height: 100,
                                 resizeMode: 'contain',
+                                left: -20,
                             }}
                             source={{ url: image }}
                         />
@@ -72,13 +81,26 @@ export default function RideOptionsCard() {
                             <Text style={tw`text-xl font-semibold`}>
                                 {title}
                             </Text>
-                            <Text>Travel time...</Text>
+                            <Text>
+                                {travelTimeInformation?.duration?.text} travel
+                                time
+                            </Text>
                         </View>
-                        <Text style={tw`text-xl`}>$999.99</Text>
+                        <Text style={tw`text-xl`}>
+                            {new Intl.NumberFormat('en-us', {
+                                style: 'currency',
+                                currency: 'EUR',
+                            }).format(
+                                (travelTimeInformation?.duration.value *
+                                    SURGE_CHARGE_RATE *
+                                    multiplier) /
+                                    100
+                            )}
+                        </Text>
                     </TouchableOpacity>
                 )}
             />
-            <View>
+            <View style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity
                     style={tw`bg-black py-3 ${!selected && 'bg-gray-300'}`}
                 >

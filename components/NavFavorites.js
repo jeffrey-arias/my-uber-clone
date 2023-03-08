@@ -14,7 +14,7 @@ const data = [
         id: '456',
         icon: 'briefcase',
         location: 'Work',
-        destination: 'Las Pinas City, Manila, PH',
+        destination: 'Makati City, Manila, PH',
     },
 ];
 const NavFavorites = () => {
