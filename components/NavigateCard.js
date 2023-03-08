@@ -16,7 +16,7 @@ export default function NavigateCard() {
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
             <Text style={tw`text-center py-5 text-xl`}>Hello, Iza</Text>
-            <View style={tw`border-t border-gray-200 flex-shrink`}>
+            <View style={tw`border-t border-gray-200`}>
                 <GooglePlacesAutocomplete
                     placeholder="Where to?"
                     debounce={400}

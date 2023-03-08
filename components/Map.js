@@ -32,9 +32,6 @@ export default function Map() {
                     `https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${origin.description}&destinations=${destination.description}&key=${GOOGLE_MAPS_API_KEY}`
                 );
                 const data = await response.json();
-                console.log(
-                    'DATA__________' + JSON.stringify(data.rows[0].elements[0])
-                );
                 dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
             }
         };
