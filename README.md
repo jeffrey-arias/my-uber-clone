@@ -3,8 +3,8 @@
 This is my version of the popular Uber (Rides) application.
 
 Demo:\
-[![Demo My Uber Clone](https://j.gifs.com/vQp9Er.gif)](https://youtu.be/RtSyWWRmzDk)
-[Direct YouTube Link](https://youtu.be/RtSyWWRmzDk)
+[<img src="https://j.gifs.com/lR9Mql.gif" width="35%">](https://youtu.be/RtSyWWRmzDk)\
+[Full demo here](https://youtu.be/RtSyWWRmzDk)
 
 # Tech Stack
 TypeScript \
