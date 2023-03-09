@@ -7,7 +7,7 @@ Demo:\
 [Full demo here](https://youtu.be/RtSyWWRmzDk)
 
 # Tech Stack
-TypeScript \
+Javascript \
 React Native \
 Redux \
 Expo \
