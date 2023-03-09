@@ -11,10 +11,10 @@ Javascript \
 React Native \
 Redux \
 Expo \
-React Navigation
-React Native Gesture Handler
-React Native Elements
-React Native Vector Icons
+React Navigation \
+React Native Gesture Handler \
+React Native Elements \
+React Native Vector Icons \
 react-google-places-autocomplete \
 react-native-maps \
 react-native-maps-directions \
